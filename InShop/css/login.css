@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+/*登录框*/
+.login_box{
+	margin:10px auto 0;
+	width:306px;
+	border:1px solid #999;
+	padding:15px 76px;
+}
+#user_pass label{
+	line-height:20px;
+	color:#666;
+}
+#user_pass input[type='text'],input[type='password']{
+	width:269px;
+	height:32px;
+	line-height:32px;
+	display:block;
+	border:1px solid #999;;
+	margin-bottom:10px;
+	padding-left:5px;
+	padding-right:30px;
+}
+#username{
+	background:url(../img/icon/user.png) right 10px center no-repeat;
+}
+#password{
+	background:url(../img/icon/pass.png) right 10px center no-repeat;
+}
+#user_pass > p{
+	height:50px;
+	line-height:50px;
+}
+#user_pass > p a{
+	text-decoration:none;
+	color:#000;
+}
+.login_cont >p a:hover{
+	text-decoration:underline;
+}
+.login_cont input[type='checkbox']{
+	position:relative;
+	top:2px;
+	margin-right:2px;
+}
+.login_cont label{
+	margin-right:10px;
+}
+.login_btn{
+	width:100%;
+	height:35px;
+	line-height:35px;
+	font-size:16px;
+	font-weight:bold;
+	background:-moz-linear-gradient(bottom,#DDDDDD,#eeeeee);
+	background:-webkit-linear-gradient(bottom,#DDDDDD,#eeeeee);
+	background:-o-linear-gradient(bottom,#DDDDDD,#eeeeee);
+	border-radius:5px;
+	color:#606060;
+}
+.login_box_bottom{
+	padding-top:20px;
+	position:relative;
+}
+.login_partners p{
+	line-height:24px;
+	color:#999;
+}
+.login_partners li{
+	float:left;
+	margin-right:3px;
+}
+.free_register{
+	position:absolute;
+	bottom:0;
+	right:0;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	width:115px;
+	height:32px;
+	line-height:32px;
+	background:#7CBE56;
+	color:#fff;
+	font-size:16px;
+	margin-bottom:0px;
+}

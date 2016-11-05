@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+/*底部版权区*/
+.footer{
+	width:100%;
+	background:#D4D4D4;
+	text-align:center;
+	padding:50px 0;
+}
+.footer p{
+	font-size:12px;
+	font-family:'simsun','宋体';
+	line-height:24px;
+}
+.footer a{
+	text-decoration:none;
+	color:#000;
+}
+.footer i{
+	font-style:normal;
+	margin:0 5px;
+}
+.footer_img{
+	padding-top:30px;
+}
+.footer_img a{
+	margin:0 12px;
+}
+

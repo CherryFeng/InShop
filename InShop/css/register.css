@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+/*注册框*/
+.register_box{
+	width:630px;
+	margin:10px auto 0;
+	border:1px solid #999;
+}
+.register_box_cont{
+	padding:50px 150px 55px 0;
+}
+.register_box_cont p{
+	height:70px;
+	line-height:70px;
+	float:right;
+}
+.register_box_cont label{
+	color:#666;
+	font-size:14px;
+	
+}
+.register_box_cont span{
+	color:red;
+}
+.register_box_cont input:not([type='checkbox']){	
+	padding-left:5px;
+	height:32px;
+	/*line-height:32px\9;*/
+	border:1px solid #999;
+}
+#mail,#address{
+	width:265px;
+}
+
+#username{
+	background:url(../img/icon/user.png) right 10px center no-repeat;
+}
+.pass{
+	background:url(../img/icon/pass.png) right 10px center no-repeat;
+}
+#username,.pass{
+	width:235px;
+	padding-right:30px;
+}
+.register_box_cont input[type='checkbox']{
+	position:relative;
+	top:2px;
+}
+.register_box_cont input[type='submit']{
+	margin-right:10px;
+	border:none;
+	width:270px;
+	background:-moz-linear-gradient(bottom,#DDDDDD,#eeeeee);
+	background:-webkit-linear-gradient(bottom,#DDDDDD,#eeeeee);
+	background:-o-linear-gradient(bottom,#DDDDDD,#eeeeee);
+	border-radius:5px;
+	color:#606060;
+	font-size:16px;
+	font-weight:bold;
+}
+.agree_provisions{
+	margin-right:45px;
+}
+.agree_provisions a{
+	color:#005AA0;
+	text-decoration:none;
+}
+.agree_provisions a:hover{
+	text-decoration:underline;
+}

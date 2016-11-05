@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>InShop登录页面</title>
+<link href="img/icon/icon.ico" rel="shortcut icon"/>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/login_register_header.css" rel="stylesheet" type="text/css">
+<link href="css/footer.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!--登录页面头部-->
+<div class="header">
+	<div class="main">
+    	<h1>欢迎登录</h1>
+    </div>
+</div>
+
+<!--登录框-->
+<div class="login_box">
+	<div class="login_cont">
+    	<form id="user_pass" action="doLogin.php" method="post">
+        	<label>邮箱/用户名/手机号</label>
+            <input type="text" id="username"/>
+            <label>密码</label>
+            <input type="password" id="password"/>
+    		<label>验证码</label>
+            <input type="text" id="verify"/>
+            <img src="getVerify.php" alt=""/>
+        	<p>
+        		<input type="checkbox" id="check1"/><label for="check1">自动登录</label>
+        		<input type="checkbox" id="check2"/><label for="check2">安全控件登录</label>
+            	<a href="#">忘记密码？</a>
+        	</p>
+        	<input type="submit" class="login_btn" value="登 录"/>
+        </form>
+        <div class="login_box_bottom clearfix">
+            <div class="login_partners left clearfix">
+                <p>使用合作网站账号登录：</p>
+                <ul>
+                    <li><a href="#"><img src="img/icon/qq.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="img/icon/wechat.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="img/icon/microblog.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="img/icon/blog.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="img/icon/renren.jpg"/></a></li>
+                </ul>
+            </div>
+            <a href="注册页.html" class="free_register">免费注册&gt;&gt;</a>
+    	</div>
+    </div>
+
+</div>
+<div class="hr_25"></div>
+<!--底部版权区-->
+<div class="footer">
+	<p>
+    	<a href="#">InShop简介</a><i>|</i>
+    	<a href="#">InShop公告</a><i>|</i>
+        <a href="#">招纳贤士</a><i>|</i>
+        <a href="#">联系我们</a><i>|</i>
+        客服热线：400-675-1234
+    </p>
+    <p>Copyright &copy;2006 - 2016 版权所有&nbsp;&nbsp;&nbsp;京ICP备09037834号&nbsp;&nbsp;&nbsp;京ICP证B1034-8373号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123</p>
+    <p class="footer_img">
+    	<a href="#"><img src="img/footer_img.jpg"/></a>
+        <a href="#"><img src="img/footer_img.jpg"/></a>
+        <a href="#"><img src="img/footer_img.jpg"/></a>
+        <a href="#"><img src="img/footer_img.jpg"/></a>
+    </p>
+</div>
+</body>
+</html>

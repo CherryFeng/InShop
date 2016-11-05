@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+.clearfix{
+	overflow:hidden;
+}
+.main{
+	width:1000px;
+	margin:0 auto;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.hide{
+	display:none;
+}
+.show{
+	display:block;
+}
+.hr_10{
+	height:10px;
+}
+.hr_15{
+	height:15px;
+}
+.hr_7{
+	height:7px;
+}
+.hr_25{
+	height:25px;
+}
+.hr_20{
+	height:20px;
+}

@@ -1,0 +1,330 @@
+@charset "utf-8";
+/* CSS Document */
+.{
+	margin:0;
+	padding:0;
+}
+/*顶部*/
+.top{
+	width:100%;
+}
+
+/*顶部收藏*/
+.topBar{
+	background:#F7F7F7;
+	height:32px;
+	line-height:32px;
+	font-family:'宋体','simsun';
+	font-size:12px;
+}
+.topBar a{
+	text-decoration:none;
+	color:#656565;
+}
+.topBar_left{
+	background:url(../img/icon/shoucang.gif) left center no-repeat;
+	float:left;
+	padding-left:16px;
+	font-weight:bold;
+}
+/*logo区*/
+.logoBar{
+	background:#1D7AD9;
+	height:85px;
+	
+}
+/*logo区右侧*/
+.step_text{
+	width:400px;
+	height:45px;
+	margin-top:24px;
+	margin-right:30px;
+	background:url(../img/icon/shopCarBalance_logoright.png) no-repeat;
+}
+
+/*收货信息*/
+.same_border{
+	border:1px solid #CCC;
+}
+.title{
+	background:-moz-linear-gradient(bottom,#F0F0F0,#F5F5F5);
+	background:-webkit-linear-gradient(bottom,#F0F0F0,#F5F5F5);
+	background:-o-linear-gradient(bottom,#F0F0F0,#F5F5F5);
+	border-bottom:1px solid #E3E3E3;
+}
+.title h4{
+	padding-left:10px;
+	height:32px;
+	line-height:32px;
+	font-family:'Microsoft YaHei','微软雅黑';
+	font-weight:normal;
+	font-size:16px;
+	color:#444;
+}
+.same_cont{
+	padding:15px 0 15px 30px;
+	font-size:12px;
+	color:#444;
+}
+.delivered_info_cont input:not([type='submit']){
+	display:inline-block;
+	height:20px;
+	border:1px solid #C2C2C2;
+}
+.delivered_info_cont li{
+	line-height:35px;
+}
+/*兼容ie9 但是会对兼容模式有影响 需改进*/
+
+.delivered_info_cont li label{
+	width:75px;
+	display:inline-block;
+}
+.same_cont i{
+	display:inline-block;
+	margin-right:7px;
+	color:#FF0000;
+	font-style:normal;
+}
+.choose_addr{
+	display:inline-block;
+	border:1px solid #c2c2c2;
+	height:18px;
+	line-height:20px;
+	padding:0 10px;
+}
+.choose_addr .arrow{
+	background:url(../img/icon/arrow_close.png) no-repeat;
+	width:8px;
+	height:4px;
+	display:inline-block;
+	position:relative;
+	bottom:2px;
+}
+.input_addr{
+	width:380px;
+	padding:0 5px;
+}
+.receiver,.phoneNum{
+	width:100px;
+	padding:0 5px;
+}
+.area_code{
+	width:50px;
+	padding:0 5px;
+}
+/*表单中的小按钮*/
+.submit_btn_confirm,.submit_btn_cancel{
+	padding:0 20px;
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	display:inline-block;
+	margin-top:10px;
+}
+.submit_btn_confirm{
+	border:1px solid #3784ED;
+	background:#4493FD;
+	color:#fff;
+}
+
+.submit_btn_cancel{
+	border:1px solid #CCC;
+	background:-moz-linear-gradient(bottom,#F8F8F8,#EFEFEF);
+	background:-webkit-linear-gradient(bottom,#F8F8F8,#EFEFEF);
+	background:-o-linear-gradient(bottom,#F8F8F8,#EFEFEF);
+	color:#666;
+}
+/*支付方式*/
+.pay_type_cont .wechat_pay{
+	width:25px;
+	height:23px;
+	background:url(../img/icon/wechat_pay.jpg) no-repeat;
+	display:inline-block;
+}
+.pay_type_cont li{
+	line-height:32px;
+	margin-bottom:8px;
+}
+.pay_type_cont input{
+	position:relative;
+	top:2px;
+	margin-right:7px;
+	
+}
+.pay_type_cont label{
+	margin-right:18px;
+}
+.pay_type_cont .wechat_pay{
+	position:relative;
+	top:7px;
+	margin-right:7px;
+}
+
+/*发票信息*/
+.invoice_info_cont li:not(.check_need_invoice){
+	line-height:32px;
+}
+.check_need_invoice{
+	margin-bottom:20px;
+}
+.check_need_invoice input{
+	position:relative;
+	top:3px;
+	margin-right:3px;
+}
+.invoice_info_cont input[type='text'],.invoice_info_cont select{
+	border:1px solid #C2C2C2;
+}
+.invoice_info_cont input[type='text']{
+	height:20px;
+	width:125px;
+	padding:0 5px;
+}
+
+/*送货清单*/
+.delivered_list_cont{
+	padding-bottom:10px;
+}
+.delivered_list h4{
+	float:left;
+}
+.delivered_list .shopcar_edit{
+	float:right;
+	margin-right:30px;
+}
+.shopcar_edit{
+	line-height:32px;
+}
+.shopcar_edit a{
+	text-decoration:none;
+	color:#3377FF;
+}
+.shopcar_edit a:hover{
+	text-decoration:underline;
+}
+.pur_shopItem_title{
+	line-height:34px;
+	height:34px;
+	color:#666;
+	border-bottom:1px solid #E6E6E6;
+}
+/*.title_item{
+	float:left;
+}*/
+.t_name{
+	width:410px;
+	padding-left:30px;
+}
+
+.t_price,.t_return,.t_num{
+	width:135px;
+}
+.t_total{
+	width:125px;
+}
+/*清单结算内容*/
+
+/*商品详细结算信息*/
+.pur_shopItem_cont{
+	padding:10px 0;
+	border-bottom:1px solid #E6E6E6;
+}
+.shop_info_left{
+	height:100px;
+	line-height:100px;
+	width:100px;
+	
+}
+.shop_info img{
+	vertical-align:middle;
+}
+
+.shop_info_title{
+	
+	margin-bottom:40px;
+}
+.pur_shopItem_cont .t_num{
+	padding-left:8px;
+	width:127px;
+}
+.font_color{
+	color:#666;
+}
+.pur_shopItem_cont .t_total{
+	color:#D70000;
+	font-weight:bold;
+}
+/*备注和不能够买的商品*/
+.remarks_invalidShop{
+	padding-left:30px;
+	padding-top:13px;
+}
+.remarks_invalidShop .remark{
+	margin-bottom:25px;
+}
+.remarks_invalidShop .remark a{
+	text-decoration:none;
+	color:#3377FF;
+}
+.remarks_invalidShop .remark a:hover{
+	text-decoration:underline;
+}
+.invalid_txt{
+	color:#EE0000;
+	margin-bottom:18px;
+}
+.invalid_txt span{
+	display:inline-block;
+	background:url(../img/icon/notice.png) no-repeat;
+	width:12px;
+	height:12px;
+	margin-right:10px;
+	position:relative;
+	top:1px;
+}
+.invalidShop_img{
+	width:90px;
+	height:85px;
+	line-height:85px;
+}
+.invalidShop_img img{
+	vertical-align:middle;
+}
+.invalidShop_info p{
+	color:#666;
+	line-height:20px;
+	padding-left:5px;
+}
+.invalid_reason{
+	color:#D70000;
+	font-weight:bold;
+}
+
+/*订单结算*/
+.order_total{
+	margin-right:25px;
+	margin-top:40px;
+	margin-bottom:30px;
+}
+.order_total p{
+	color:#929292;
+	line-height:35px;
+	font-size:16px;
+}
+.order_totalPrice{
+	font-size:24px;
+	font-family:'Microsoft YaHei','微软雅黑';
+	color:#EE0000;
+	font-style:normal;
+	margin-left:15px;
+}
+.order_total .submit_order{
+	background:#E50007;
+	color:#fff;
+	width:165px;
+	height:33px;
+	line-height:33px;
+	text-align:center;
+	font-size:16px;
+}
