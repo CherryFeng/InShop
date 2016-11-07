@@ -635,26 +635,29 @@
     <div class="shopDetail_item_description clearfix">
         <div class="leftArea left">
             <div class="description_image" id="description_image">
-            	<div id="mark"></div>
-                <div class="big_image" id="big_image">
-                	
-                    <div id="float-box"></div><!--放大镜部分-->
+            	<!--放大镜效果实现-->
+                	<!--中等大小图片-->
+            	<div id="mid_img_box">
+                	<div id="mark"></div>
+                    <div id="float-box"></div>
                     <ul>
-                    	<li><img src="img/products/shop_detail_item1/item1.jpg" alt=""/></li>
+                    	<li><img id="mid_image" src="img/products/shop_detail_item1/item1.jpg" alt=""/></li>
                     </ul> 
-                </div><!--big_image结束-->
-                <!--放大镜效果-->
-                <div id="mag_big_image">
-                	<img src="img/products/shop_detail_item1/item1_big.jpg" alt="放大后的图片"/>
-                </div><!--mag_big_image结束-->
+                </div><!--mid_img结束-->
+                <!--放大后的图片-->
+                <div id="big_img_box">
+                	<img id="big_img" src="img/products/shop_detail_item1/item1_big.jpg" alt="放大后的图片"/>
+                </div><!--big_img_box结束-->
+                
+                <!--底部列表的小图片-->
                 <div class="small_image clearfix">
-                    <a href="#" class="left"></a>
-                    <ul class="clearfix left">
-                        <li><a href="#"><img src="img/products/shop_detail_item1/small_item1.jpg" alt=""/></a></li>
+                    <a href="#" class="left" onClick="javascript:changeImg_Left();return false;"></a>
+                    <ul class="clearfix left" id="small_img_box">
+                        <li><a href="#"><img class="img_active" src="img/products/shop_detail_item1/small_item1.jpg" alt=""/></a></li>
                         <li><a href="#"><img src="img/products/shop_detail_item1/small_item2.jpg" alt=""/></a></li>
                         <li><a href="#"><img src="img/products/shop_detail_item1/small_item3.jpg" alt=""/></a></li>
                     </ul>
-                    <a href="#"></a>        
+                    <a href="#" onClick="javascript:changeImg_Right();return false;"></a>        
                 </div><!--small_image结束-->
             </div><!--description_image结束-->
         </div><!--leftArea结束-->
@@ -706,7 +709,7 @@
                     <div class="dl dl_clearfix">
                     	<div class="dt">选择颜色</div>
                         <div class="dd">
-                        	<span class="color_item">白色</span>
+                        	<span class="color_item active">白色</span>
                             <span class="color_item">黑色</span>
                             <span class="color_item">灰色</span>
                         </div>
@@ -715,7 +718,7 @@
                     <div class="dl dl_clearfix">
                     	<div class="dt">选择版本</div>
                         <div class="dd">
-                        	<span class="color_item">WiFi 16G</span>
+                        	<span class="color_item active">WiFi 16G</span>
                             <span class="color_item">WiFi 64G</span>
                             <span class="color_item">WiFi cellular 64G</span>
                             <span class="color_item">WiFi cellular 16G</span>
@@ -726,11 +729,11 @@
                     	<div class="dt">数量</div>
                         <div class="dd">
                             <div class="change_num">
-                                <a href="#" class="num_sub">-</a>
-                                <input type="text"/>
-                                <a href="#" class="num_plus">+</a>          
+                                <a href="#" onClick="javascript:numDec();return false;">-</a>
+                                <input id="amount" type="text" value="1"/>
+                                <a href="#" onClick="javascript:numInc();return false;">+</a>          
                             </div>
-                            <span>限购<em>9</em>件</span>
+                            <span>限购<em id="maxAmount">9</em>件</span>
                         </div>
                     </div>
                 </div><!--rightMid_cont结束-->
