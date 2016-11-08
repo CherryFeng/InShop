@@ -5,17 +5,16 @@
 	margin:10px auto 0;
 	width:306px;
 	border:1px solid #999;
-	padding:15px 76px;
+	padding:15px 60px;
 }
 #user_pass label{
 	line-height:20px;
 	color:#666;
 }
 #user_pass input[type='text'],input[type='password']{
-	width:269px;
+	width:240px;
 	height:32px;
 	line-height:32px;
-	display:block;
 	border:1px solid #999;;
 	margin-bottom:10px;
 	padding-left:5px;
@@ -34,6 +33,15 @@
 #user_pass > p a{
 	text-decoration:none;
 	color:#000;
+}
+#result{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	visibility:hidden;
+	position:relative;
+	top:4px;
+	
 }
 .login_cont >p a:hover{
 	text-decoration:underline;

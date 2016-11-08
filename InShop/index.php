@@ -1,24 +1,26 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html>
 <head>
-<meta charset="utf-8" />
-<title>商品详细页-商品评价</title>
-<link href="img/icon/icon.ico" rel="shortcut icon"/>
-<link type="text/css" rel="stylesheet" href="css/shop_detail_introduce.css">
-<link type="text/css" rel="stylesheet" href="css/footer.css">
-<link type="text/css" rel="stylesheet" href="css/common.css">
-<link type="text/css" rel="stylesheet" href="css/common_header.css">
-<link type="text/css" rel="stylesheet" href="css/reset.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>InShop网站首页</title>
+<link rel="shortcut icon" href="img/icon/icon.ico">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<link href="css/common.css" type="text/css" rel="stylesheet">
+<link href="css/footer.css" type="text/css" rel="stylesheet">
+<!--<link href="css/reset.css" type="text/css" rel="stylesheet">-->
 
+<!--[if IE 6]>
+<script type="text/javascript" src="script/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript" src="script/ie6Fixpng.js"></script>
+<![endif]-->
 
 <script src="script/jquery-1.10.0.js" type="text/javascript"></script>
-<script src="script/menu.js" type="text/javascript"></script>
-<script src="script/shop_detail_introduce_support.js"></script>
-<script src="script/shop_detail_introduce.js" type="text/javascript"></script>
+<script src="script/elevator.js" type="text/javascript"></script>
+<script src="script/nav.js" type="text/javascript"></script>
+<script src="script/banner.js" type="text/javascript"></script>
 </head>
 
 <body>
-
 <div class="top">
     <!--顶部收藏-->
 	<div class="topBar">
@@ -47,8 +49,8 @@
     <div class="navBar">
     	<div class="main">
         	<div class="shopClass left">
-            	<h3>全部商品分类<i class="shopClassoni"></i></h3>
-                <div class="shopClass_show hide">
+            	<h3>全部商品分类<i></i></h3>
+                <div class="shopClass_show">
                 	<div class="item">
                         <dl class="shopClass_item">
                             <dt>
@@ -175,7 +177,6 @@
                                 <a href="#">平板</a>
                             </dd>
                         </dl>
-                        <!--菜单栏的子菜单-->
                         <div class="shopClass_submenu  hide">
                         	<div class="shopClass_sub_cont">
                                 <dl class="shopClass_sub_item">
@@ -286,7 +287,6 @@
                                 <a href="#">洗衣机</a>
                             </dd>
                         </dl>
-                        <!--菜单栏的子菜单-->
                         <div class="shopClass_submenu  hide">
                             <div class="shopClass_sub_cont">
                                 <!--<dl class="shopClass_sub_item">
@@ -508,7 +508,6 @@
                                 <a href="#">保健</a>
                             </dd>
                         </dl>  
-                    	<!--菜单栏的子菜单-->
                         <div class="shopClass_submenu  hide">
                             <div class="shopClass_sub_cont">
                                 <dl class="shopClass_sub_item">
@@ -606,11 +605,10 @@
                             </div><!--shopClass_sub_cont结束-->
                         </div><!--shopClass_submenu结束-->
                 	</div>
-                
-                </div><!--shopClass_show结束-->
+                </div><!--shopClass_show结束-->          
             </div><!--shopClass结束-->
             <ul class="nav left">
-                <li class="nav_active"><a href="#">数码城</a></li>
+                <li><a href="产品分类页.html">数码城</a></li>
                 <li><a href="#">天黑黑</a></li>
                 <li><a href="#">团购</a></li>
                 <li><a href="#">发现</a></li>
@@ -621,452 +619,362 @@
     </div><!--navBar结束-->
 </div><!--top结束-->
 
-<div class="breadcrumb_nav main">
-	<strong><a href="#">首页</a></strong>
-    <span>&gt;</span>
-    <a href="#">平板电脑</a>
-    <span>&gt;</span>
-    <a href="#">Apple苹果</a>
-    <span>&gt;</span>
-    <a href="#">MD531CH/A</a>
+<!--右侧banner图-->        	
+<div class="banner main clearfix">
+    <div class="banner_bar">
+        <ul class="img_box">
+         	<li style="z-index:1"><a href="#"><img src="img/banner/banner_big_1.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="img/banner/banner_big_2.jpg" alt="" /></a></li>
+            <li><a href="#"><img src="img/banner/banner_big_3.jpg" alt="" /></a></li>
+            
+        </ul>
+        <div class="img_Num">
+        	<a href="#" class="active"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
 </div>
 
-<!--产品详细介绍-->
-<div class="main">
-    <div class="shopDetail_item_description clearfix">
-        <div class="leftArea left">
-            <div class="description_image" id="description_image">
-            	<!--放大镜效果实现-->
-                	<!--中等大小图片-->
-            	<div id="mid_img_box">
-                	<div id="mark"></div>
-                    <div id="float-box"></div>
-                    <ul>
-                    	<li><img id="mid_image" src="img/products/shop_detail_item1/item1.jpg" alt=""/></li>
-                    </ul> 
-                </div><!--mid_img结束-->
-                <!--放大后的图片-->
-                <div id="big_img_box">
-                	<img id="big_img" src="img/products/shop_detail_item1/item1_big.jpg" alt="放大后的图片"/>
-                </div><!--big_img_box结束-->
-                
-                <!--底部列表的小图片-->
-                <div class="small_image clearfix">
-                    <a href="#" class="left" onClick="javascript:changeImg_Left();return false;"></a>
-                    <ul class="clearfix left" id="small_img_box">
-                        <li><a href="#"><img class="img_active" src="img/products/shop_detail_item1/small_item1.jpg" alt=""/></a></li>
-                        <li><a href="#"><img src="img/products/shop_detail_item1/small_item2.jpg" alt=""/></a></li>
-                        <li><a href="#"><img src="img/products/shop_detail_item1/small_item3.jpg" alt=""/></a></li>
-                    </ul>
-                    <a href="#" onClick="javascript:changeImg_Right();return false;"></a>        
-                </div><!--small_image结束-->
-            </div><!--description_image结束-->
-        </div><!--leftArea结束-->
-        
-        <div class="rightArea right">
-        	<div class="rightTop">
-                <h3>全网底价 Apple 苹果 iPad mini 16G WiFi版 平板电脑 前白后银 MD531CH/A 银白两色 生产批次不同混合发货</h3>
-                
-                <div class="dl price">
-                    <div class="dt price_left">InShop价</div>
-                    <div class="dd price_right">
-                        <em>¥</em>
-                        <span class="price_num">1999.00</span>
-                    </div>
-                </div><!--price结束-->
-                
-                <div class="dl discount">
-                    <div class="dt discount_left">优惠</div>
-                    <div class="dd discount_right">
-                        <i>满换购</i>
-                        <em>购iPad加价优惠购配件或USB充电插座</em>
-                        <a href="#">详情&gt;&gt;</a>
-                    </div>
-                </div><!--discount结束-->
-                
-			</div><!--rightTop结束-->
-            
-            <div class="rightMid">
-            	<div class="rightMid_cont">
-                    <div class="dl dl_clearfix">
-                        <div class="dt">送到</div>
-                        <div class="dd">
-                        	<div class="address">
-                            	<div class="address_detail"> 
-                                	<span class="addr_txt" contenteditable="true">北京市海淀区五环内</span>
-                                	<span class="addr_arrow" id="addr_arrow" onClick="javascript:arrowEvent();"></span>                             
-                                </div>
-								<ul class="address_list" id="address_list" style="display:none">
-                                            <li>北京市丰台区</li>
-                                            <li>北京市朝阳区</li>
-                                            <li>北京市大兴区</li>
-                                </ul> 
-							</div><!--address结束-->
-                            <span class="shop_state">有货，可当日出货</span>
-                         
-						</div><!--dd结束-->
-                    </div><!--dl结束-->
-                    
-                    <div class="dl dl_clearfix">
-                    	<div class="dt">选择颜色</div>
-                        <div class="dd">
-                        	<span class="color_item active">白色</span>
-                            <span class="color_item">黑色</span>
-                            <span class="color_item">灰色</span>
-                        </div>
-                    </div>
-                    
-                    <div class="dl dl_clearfix">
-                    	<div class="dt">选择版本</div>
-                        <div class="dd">
-                        	<span class="color_item active">WiFi 16G</span>
-                            <span class="color_item">WiFi 64G</span>
-                            <span class="color_item">WiFi cellular 64G</span>
-                            <span class="color_item">WiFi cellular 16G</span>
-                        </div>
-                    </div>
-                    
-                    <div class="dl number dl_clearfix">
-                    	<div class="dt">数量</div>
-                        <div class="dd">
-                            <div class="change_num">
-                                <a href="#" onClick="javascript:numDec();return false;">-</a>
-                                <input id="amount" type="text" value="1"/>
-                                <a href="#" onClick="javascript:numInc();return false;">+</a>          
-                            </div>
-                            <span>限购<em id="maxAmount">9</em>件</span>
-                        </div>
-                    </div>
-                </div><!--rightMid_cont结束-->
-            </div><!--rightMid结束-->
-            
-            <div class="right_bottom clearfix">
-                <div>
-                    已选择 <span class="right_selected">"白色|WiFi 16G"</span>
-                </div>
-                
-                <div class="right_buy clearfix">
-                	<div class="shopping_btn">
-                    	<a href="#"><i></i>加入购物车</a>
-                    </div><!--shopping_btn结束-->
-                    <div class="line"></div>
-                    <div class="buy_btn">
-                    	<a href="#"><i></i>立即购买</a>
-                    </div>
-                </div><!--buy_btn结束-->
-                
-                <div class="right_notes">注意：此商品可提供普通发票，不能提供增值税发票。</div>
-            
-            </div>
-            
-        </div><!--rightArea结束-->	
-    </div><!--shopDetail_item_description结束-->
-</div><!--main结束-->
+<!--左侧固定的楼式导航-->
+<div id="menu">
+	<ul>
+    	<li><a href="#electrical" class="current">1F 家电</a></li>
+        <li><a href="#snacks">2F 食品</a></li>
+        <li><a href="#clothes">3F 服饰</a></li>
+        <li><a href="#skincare">4F 美妆</a></li>
+    </ul>
+</div>
 
-<div class="hr_15"></div>
-
-<div class="main bottom clearfix">
-	<div class="bottom_leftArea left">
-    	<div class="left_recommend">
-            <div class="left_title">
-                <h3>同价位</h3>
-            </div>
-            
-            <div class="left_item">
-            	<div class="left_item_cont">
-                    <p class="left_item_img"><a href="#"><img src="img/products/left_item1.jpg" alt=""/></a></p>
-                    <p class="left_item_txt"><a href="#">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a></p>
-                    <p class="left_item_price">¥3588.00</p>
-                </div><!--left_item_cont结束-->
-            </div><!--left_item结束-->
-            
-            <div class="left_item">
-            	<div class="left_item_cont">
-                    <p class="left_item_img"><a href="#"><img src="img/products/left_item2.jpg" alt=""/></a></p>
-                    <p class="left_item_txt"><a href="#">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a></p>
-                    <p class="left_item_price">¥3588.00</p>
-                </div><!--left_item_cont结束-->
-            </div><!--left_item结束-->
-            
-            <div class="left_item">
-            	<div class="left_item_cont">
-                    <p class="left_item_img"><a href="#"><img src="img/products/left_item3.jpg" alt=""/></a></p>
-                    <p class="left_item_txt"><a href="#">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a></p>
-                    <p class="left_item_price">¥3588.00</p>
-                </div><!--left_item_cont结束-->
-            </div><!--left_item结束-->
-            
-            <div class="left_item">
-            	<div class="left_item_cont">
-                    <p class="left_item_img"><a href="#"><img src="img/products/left_item4.jpg" alt=""/></a></p>
-                    <p class="left_item_txt"><a href="#">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a></p>
-                    <p class="left_item_price">¥3588.00</p>
-                </div><!--left_item_cont结束-->
-            </div><!--left_item结束-->
-            
-        </div><!--left_recommend结束-->
-        
-        <div class="hr_10"></div>
-        
-        <div class="left_recommend">
-            <div class="left_title">
-                <h3>看了最终买</h3>
-            </div>
-            
-            <div class="left_item">
-            	<div class="left_item_cont">
-                    <p class="left_item_img"><a href="#"><img src="img/products/left_item5.jpg" alt=""/></a></p>
-                    <p class="left_item_txt"><a href="#">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a></p>
-                    <p class="left_item_price">¥3588.00</p>
-                </div><!--left_item_cont结束-->
-            </div><!--left_item结束-->
-            
-            <div class="left_item">
-            	<div class="left_item_cont">
-                    <p class="left_item_img"><a href="#"><img src="img/products/left_item6.jpg" alt=""/></a></p>
-                    <p class="left_item_txt"><a href="#">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a></p>
-                    <p class="left_item_price">¥3588.00</p>
-                </div><!--left_item_cont结束-->
-            </div><!--left_item结束-->
-
-            <div class="left_item">
-            	<div class="left_item_cont">
-                    <p class="left_item_img"><a href="#"><img src="img/products/left_item7.jpg" alt=""/></a></p>
-                    <p class="left_item_txt"><a href="#">Samsung 三星 GALAXY Tab 3 8.0 WLAN版本 T310平板电话</a></p>
-                    <p class="left_item_price">¥3588.00</p>
-                </div><!--left_item_cont结束-->
-            </div><!--left_item结束-->
-   
-        </div><!--left_recommend结束-->
-    </div><!--bottom_leftArea结束-->
+<div id="content">
+    <!--家用电器商品列表-->
+    <div class="shopTit main" id="electrical">
+        <span></span>
+        <h3>家用电器</h3>
+        <a href="#">更多&gt;&gt;</a>
+    </div><!--shopTit结束-->
     
-    <div class="bottom_rightArea right">
-    	<div class="rightArea_shopIntroduce">
-            <div class="shopIntroduce_cont">
-                <!--标题-->
-                <div class="introduce_title" id="intro_com_title">
-                    <ul class="clearfix">
-                        <li><a href="商品详细页-商品介绍.html#intro_com_title"><i class="introduce_icon"></i>产品介绍</a></li>
-                        <li class="li_active"><a href="商品详细页-商品介绍.html#intro_com_title"><i class="comment_icon"></i>商品评价（18782）</a></li>
-                    </ul>
-                </div><!--rightArea_title结束-->
-                
-                <!--商品介绍具体内容-->
-                <div class="introduce_txt hide" id="introduce">
-                	<div class="introduce_txt_cont">
-                    	<!--商品介绍图片-->
-                        <div class="ad">
-                            <a href="#"><img src="img/products/shop_detail_introduce_banner.jpg" alt=""/></a>
-                        </div>
-                        <!--商品介绍文字部分-->
-                        <div class="txt">
-                            <div class="txt_title">
-                                <h3>强烈推荐</h3>
-                                <h4>货比三家，还选</h4>
-                            </div>
-                            <div class="txt_cont">
-                            	<p>现在就是买mini的好时候！换代清仓直降，但苹果品质不变！A5双核，内置Lightning闪电接口，正反可插，方便人性。小身材，炫丽的7.9英寸显示屏，7.2mm的厚度，薄如铅笔。女生包包随身携带更时尚！facetime视频通话，与密友24小时畅聊不断线。微信倾力打造，你的智能助理。苹果的牌子就不用我说了，1111补仓，存货不多哦！</p>
-                            </div><!--txt_cont结束-->
-                        </div><!--txt结束-->
-                        
-                        <div class="txt">
-                            <div class="txt_title ">
-                                <h3>精美图片</h3>
-                                <h4></h4> 
-                            </div>
-                            <div class="txt_cont">
-                            	<p>苹果iPad7.9 英寸显示屏可带来新的iPad体验，绚丽的显示屏，在每一寸画面中呈现灵动鲜活的美妙影像。苹果miniMD528CH/A采用500 万像素 iSight 摄像头，清晰记录每一次的幸福。</p>
-                                <!--商品介绍图片部分-->
-                                <p class="introduce_txt_img"><img src="img/products/shop_detail_introduce_img1.jpg" alt=""/></p>
-                            </div><!--txt_cont结束-->
-                        </div><!--txt结束-->
-                   
-                   </div><!--introduce_txt_cont结束-->
-                </div><!--introduce_txt结束-->      
-        	</div><!--shopIntroduce_cont结束-->
-        </div><!--rightArea_shopIntroduce结束-->
+    <!--商品详细列表-->
+    <div class="shopList main clearfix">
+        <div class="shopList_left left">
+            <div class="banner_sm">
+                <ul class="img_sm_box">
+                    <li><a href="#"><img src="img/banner/banner_sm_4.jpg" alt=""></a></li>
+                </ul>        
+            </div><!--banner_sm结束-->
+        </div><!--shopList_left-->
         
-        <div class="hr_15"></div>
-        
-        <!--商品评价部分-->
-        <div class="rightArea_shopComments" id="comments">
-            <h4>商品评价</h4>
-            <div class="comments_box clearfix">
-                <div class="left com_box_left">
-                <em>4.7</em>
-                <span>分</span>
+        <div class="shopList_right left clearfix">
+            <div class="shopList_right_top clearfix">
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/electrical/item_big_2.jpg"></a>
+                    <h3>Asus顽石 游戏本i7</h3>
+                    <p>4799元</p>
                 </div>
-                <div class="left com_box_right">
-                    <ul class="clearfix">
-                        <li>非常不满意</li>
-                        <li>不满意</li>
-                        <li>一般</li>
-                        <li>满意</li>
-                        <li>非常满意</li>
-                    </ul>
-                    <div class="comments_score">4.7<i></i></div>
-                    <p>共18939位买家参与评分</p>
-                </div> <!--com_box_right结束-->	
-            </div><!--comments_box结束-->
-            
-            <!--用户评价分类条-->
-            <div class="tab_title clearfix">
-                <div class="tab_title_left left">
-                    <ul>
-                    <li><a href="#" class="li_a_active">全部</a></li>
-                    <li><a href="#">满意(17490)</a></li>
-                    <li><a href="#">一般(743)</a></li>
-                    <li><a href="#">不满意(549)</a></li>
-                    </ul>
-                </div><!--tab_title_left结束-->
-            </div><!--tab_title结束-->
-        	
-            <!--具体评价-->
-            <div class="users_comments">
-            	<!--具体每一条评价-->
-                <div class="comments_item clearfix">
-                	<div class="comments_item_left left">
-                    	<img src="img/icon/user_rank2.jpg" alt=""/>
-                        <p>61***42</p>
-                        <p>金色会员</p>
-                    </div><!--comments_item_left结束-->
-                    <div class="comments_item_right">
-                    	<p>
-                        	<span class="stars"></span>
-                            <span class="stars"></span>
-                            <span class="stars"></span>
-                            <span class="stars"></span>
-                            <span class="stars"></span>
-                            <span class="stars_rank">5分 满意</span>
-                    	</p>
-                        <p class="comments_txt">挺不错的，性价比很高</p>
-                        <p class="comments_attitude"><a href="#">顶(0)</a><a href="#">踩(0)</a></p>
-                        <span class="right pub_time">2016-09-22 19:13:33</span>
-                    </div><!--comments_item_right结束-->
-                </div><!--comments_item结束-->
-                
-                <div class="comments_item clearfix">
-                	<div class="comments_item_left left">
-                    	<img src="img/icon/user_rank1.jpg" alt=""/>
-                        <p>88***22</p>
-                        <p>铜色会员</p>
-                    </div><!--comments_item_left结束-->
-                    <div class="comments_item_right">
-                    	<p>
-                        	<span class="stars"></span>
-                            <span class="stars"></span>
-                            <span class="stars"></span>
-                            <span class="stars"></span>
-                            <span class="stars"></span>
-                            <span class="stars_rank">5分 满意</span>
-                    	</p>
-                        <p class="comments_txt">挺不错的，性价比很高</p>
-                        <p class="comments_attitude"><a href="#">顶(0)</a><a href="#">踩(0)</a></p>
-                        <span class="right pub_time">2016-09-22 19:13:33</span>
-                    </div><!--comments_item_right结束-->
-                </div><!--comments_item结束-->
-                
-                <!--评价项的页码-->
-            	<div class="page_number">
-                    <a href="#">上一页</a>
-                    <a href="#" class="page_number_aLink">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">7</a>
-                    <span>. . .</span>
-                    <a href="#">200</a>
-                    <a href="#">下一页</a>
-                    <span>共200页，到第</span>
-                    <!--<input type="number" max="200" min="1" class="turnpage_num"/>-->
-                    <input type="text" class="turnpage_num"/>
-                    <span>页</span>
-                    <input type="submit" class="page_number_btn" value="确定"/>  
-        		</div><!--page_number结束-->
-            </div><!--users_comments结束-->      
-        </div><!--rightArea_shopComments结束-->
-		
-        <div class="hr_15"></div>
-        
-        <!--商品咨询部分-->
-        <div class="shopConsult">
-        	<div class="shopConsult_cont">
-                <div class="shopConsult_title clearfix">
-                    <h4>全部咨询(705)</h4>
-                    <div class="pub_consult">
-                    	<div class="pub_consult_txt clearfix"><a href="#">发表咨询</a></div>
-                    </div><!--pub_consult结束-->
-                </div><!--shopConsult_title结束-->
-                <div class="shopConsult_txt">
-                	<div class="shopConsult_txt_cont">
-                    	<div class="tips">
-                        	<p>提示:因厂家更改产品包装、产地或者更换随机附件等没有任何提前通知，且每位咨询者购买情况、提问时间等不同，为此以下回复信息仅供参考！若由此给您带来不便请多多谅解，谢谢！</p>
-                        </div>
-                        <!--用户咨询内容-->
-                        <div class="usersConsults">
-                        	<!--每条用户咨询内容-->
-                            <div class="consult_item clearfix">
-                            	<div class="consult_item_left left">
-                                	<img src="img/icon/user_rank3.jpg" alt=""/>
-                                    <p>12***20</p>
-                                    <p>土星会员</p>
-                                </div><!--consult_item_left结束-->
-                                <div class="consult_item_right">
-                                	<p class="consult_item_title">[商品咨询]</p>
-                                    <p class="consult_item_txt">还能再便宜点么？</p>
-                                    <p class="response">
-                                    	<i></i><em>慕课网回复：</em>您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了
-                                    </p>
-                                    <span class="consult_time">2016-09-22 22:25:14</span>
-                                </div><!--consult_item_right结束-->
-                            </div><!--consult_item结束-->
-                            
-                            <div class="consult_item clearfix">
-                            	<div class="consult_item_left left">
-                                	<img src="img/icon/user_rank3.jpg" alt=""/>
-                                    <p>12***20</p>
-                                    <p>土星会员</p>
-                                </div><!--consult_item_left结束-->
-                                <div class="consult_item_right">
-                                	<p class="consult_item_title">[商品咨询]</p>
-                                    <p class="consult_item_txt">还能再便宜点么？</p>
-                                    <p class="response">
-                                    	<i></i><em>慕课网回复：</em>您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了您好，现在已经是活动价格了
-                                    </p>
-                                    <span class="consult_time">2016-09-22 22:25:14</span>
-                                </div><!--consult_item_right结束-->
-                            </div><!--consult_item结束-->
-                    	</div><!--usersConsults结束-->
-                    </div><!--shopConsult_txt_cont结束-->
-                	
-                    <!--咨询部分的页面-->
-                	<div class="page_number">
-                        <a href="#">上一页</a>
-                        <a href="#" class="page_number_aLink">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                        <span>. . .</span>
-                        <a href="#">200</a>
-                        <a href="#">下一页</a>
-                        <span>共200页，到第</span>
-                        <!--<input type="number" max="200" min="1" class="turnpage_num"/>-->
-                        <input type="text" class="turnpage_num"/>
-                        <span>页</span>
-                        <input type="submit" class="page_number_btn" value="确定"/>  
-        			</div><!--page_number结束-->  
-                </div><!--shopConsult_txt结束-->
-            </div><!--shopConsult_cont结束-->
-        </div><!--shopConsult结束-->
-    </div><!--bottom_rightArea结束-->
-</div><!--bottom结束-->
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/electrical/item_big_3.jpg" alt=""></a>
+                    <h3>Sony 覆盖广角长焦</h3>
+                    <p>5899元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/electrical/item_big_5.jpg" alt=""></a>
+                    <h3>索尼 4K液晶网络智能电视</h3>
+                    <p>8499元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/electrical/item_big_6.jpg" alt=""></a>
+                    <h3>美的 智能变频对开门冰箱</h3>
+                    <p>4499元</p>
+                </div>
+            </div><!--sopList_right_top结束--> 
+            <div class="shopList_right_bottom">
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/electrical/Ditem_1.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#"  class="active">惠芯影音，岂止于快 55吋曲面4K</a>
+                        <p>¥3699.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/electrical/Ditem_2.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">9公斤洗烘一体 斐雪派克直驱变频</a>
+                        <p>¥6499.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/electrical/Ditem_4.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">锋丽双生 奇乐无穷 新款夏普手机</a>
+                        <p>¥1888.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/electrical/Ditem_5.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">ENJOY云魔方 纯平触控</a>
+                        <p>¥4390.00</p>
+                    </div>
+                </div>
+            </div><!--sopList_right_bottom结束-->
+        </div><!--shopList_right-->
+    </div><!--shopList结束-->
 
-<div class="hr_15"></div>
+    
+    <!--食品酒水商品列表-->
+    <div class="shopTit main" id="snacks">
+        <span></span>
+        <h3>食品酒水</h3>
+        <a href="#">更多&gt;&gt;</a>
+    </div><!--shopTit结束-->
+    <!--商品详细列表-->
+    <div class="shopList main clearfix">
+        <div class="shopList_left left">
+            <div class="banner_sm">
+                <ul class="img_sm_box">
+                    <li><a href="#"><img src="img/banner/banner_sm_7.jpg"></a></li>
+                </ul>        
+            </div><!--banner_sm结束-->
+        </div><!--shopList_left-->
+        
+        <div class="shopList_right left clearfix">
+            <div class="shopList_right_top clearfix">
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/snacks/Litem_big_1.jpg" alt=""></a>
+                    <h3>新希望香蕉牛奶</h3>
+                    <p>49元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/snacks/Litem_big_2.jpg" alt=""></a>
+                    <h3>口水娃兰花豆4味</h3>
+                    <p>33.6元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/snacks/Litem_big_3.jpg" alt=""></a>
+                    <h3>费列罗巧克力48粒</h3>
+                    <p>129元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/snacks/Litem_big_4.jpg" alt=""></a>
+                    <h3>52°五粮液普通版</h3>
+                    <p>588元</p>
+                </div>
+            </div><!--sopList_right_top结束--> 
+            <div class="shopList_right_bottom">
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/snacks/Litem_sm_1.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#" class="active">旺仔 牛奶125ml*20盒复原乳</a>
+                        <p>¥39.9</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/snacks/Litem_sm_2.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">新宝堂古方老陈皮零食咸味</a>
+
+                        <p>¥25.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/snacks/Litem_sm_3.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">江小白 清香型高粱酒45度</a>
+                        <p>¥29.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/snacks/Litem_sm_4.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">茱蒂丝芝士乳酪夹心饼干</a>
+                        <p>¥76.00</p>
+                    </div>
+                </div>
+            </div><!--sopList_right_bottom结束-->
+        </div><!--shopList_right-->
+    </div><!--shopList结束-->
+    
+ 
+    <!--服装鞋包商品列表-->
+    <div class="shopTit main" id="clothes">
+        <span></span>
+        <h3>服装鞋包</h3>
+        <a href="#">更多&gt;&gt;</a>
+    </div><!--shopTit结束-->
+    <!--商品详细列表-->
+    <div class="shopList main clearfix">
+        <div class="shopList_left left">
+            <div class="banner_sm">
+                <ul class="img_sm_box">
+                    <li><a href="#"><img src="img/banner/banner_sm_8.jpg"></a></li>
+                </ul>        
+            </div><!--banner_sm结束-->
+        </div><!--shopList_left-->
+        
+        <div class="shopList_right left clearfix">
+            <div class="shopList_right_top clearfix">
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/clothes/citem_big_3.jpg" alt=""></a>
+                    <h3>约会新品 惊喜低价</h3>
+                    <p>50元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/clothes/citem_big_5.jpg" alt=""></a>
+                    <h3>短款牛仔外套 小白鞋</h3>
+                    <p>125元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/clothes/citem_big_7.jpg" alt=""></a>
+                    <h3>潮流时尚商场同款</h3>
+                    <p>299元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/clothes/citem_big_2.jpg" alt=""></a>
+                    <h3>型男必备 优惠促销</h3>
+                    <p>399元</p>
+                </div>
+            </div><!--sopList_right_top结束--> 
+            <div class="shopList_right_bottom">
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/clothes/citem_sm_8.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#" class="active">潮流新品 给你酷范十足</a>
+                        <p>¥309.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/clothes/citem_sm_5.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">满四减一  潮流男T 正在疯抢</a>
+                        <p>¥198.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/clothes/citem_sm_7.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">中老年2016新品 蓝色衬衫</a>
+                        <p>¥199.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/clothes/citem_big_6.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">快时尚 你的包包不够用了</a>
+                        <p>¥399.00</p>
+                    </div>
+                </div>
+            </div><!--sopList_right_bottom结束-->
+        </div><!--shopList_right-->
+    </div><!--shopList结束-->
+    
+    
+    <!--个护美肤商品列表-->
+    <div class="shopTit main" id="skincare">
+        <span></span>
+        <h3>个护美肤</h3>
+        <a href="#">更多&gt;&gt;</a>
+    </div><!--shopTit结束-->
+    <!--商品详细列表-->
+    <div class="shopList main clearfix">
+        <div class="shopList_left left">
+            <div class="banner_sm">
+                <ul class="img_sm_box">
+                    <li><a href="#"><img src="img/banner/banner_sm_5.jpg"></a></li>
+                </ul>        
+            </div><!--banner_sm结束-->
+        </div><!--shopList_left-->
+        
+        <div class="shopList_right left clearfix">
+            <div class="shopList_right_top clearfix">
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/skincare/sitem_big_3.jpg" alt=""></a>
+                    <h3>韩束 开学季 满199减80</h3>
+                    <p>329元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/skincare/sitem_big_4.jpg" alt=""></a>
+                    <h3>相宜本草99购物节</h3>
+                    <p>299元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/skincare/sitem_big_5.jpg" alt=""></a>
+                    <h3>潘婷 修护利器在手</h3>
+                    <p>139元</p>
+                </div>
+                <div class="top_item">
+                    <a href="#"><img src="img/shopList/skincare/sitem_big_6.jpg" alt=""></a>
+                    <h3>高姿GOGI尊享套装</h3>
+                    <p>199元</p>
+                </div>
+            </div><!--sopList_right_top结束--> 
+            <div class="shopList_right_bottom">
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/skincare/sitem_sm_2.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#" class="active">百雀羚 水嫩倍现至尚套装</a>
+                        <p>¥188.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/skincare/sitem_sm_3.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">曼秀雷敦 控油抗痘洁面乳</a>
+                        <p>¥145.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/skincare/sitem_sm_4.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">YSL口红/圣罗兰滋润亮彩圆管口红</a>
+                        <p>¥279.00</p>
+                    </div>
+                </div>
+                <div class="bottom_item">
+                    <div class="btm_item_img left">
+                        <a href="#"><img src="img/shopList/skincare/sitem_sm_5.jpg" alt=""/></a>
+                    </div>
+                    <div class="btm_item_txt left">
+                        <a href="#">卡姿兰 蜗牛气垫调控霜礼盒装</a>
+                        <p>¥199.00</p>
+                    </div>
+                </div>
+                
+            </div><!--sopList_right_bottom结束-->
+        </div><!--shopList_right-->
+    </div><!--shopList结束-->
+</div>  
+
+
 <div class="hr_25"></div>
 
 <!--底部版权区-->
