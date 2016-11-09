@@ -22,32 +22,38 @@
 <!--登录框-->
 <div class="login_box">
 	<div class="login_cont">
-    	<!--<form id="user_pass" action="doLogin.php" method="post">-->
-        <form id="user_pass">
+    	<form id="user_pass" action="doLogin.php" method="post">
+        <!--<form id="user_pass">-->
         	<li>
                 <label>邮箱/用户名/手机号</label>
-                <input type="text" id="username" autofocus onBlur="checkUsername()"/>
-                <span id="result"></span>
+                <!--<input type="text" id="username" autofocus onBlur="checkUsername()"/>-->
+                <input type="text" name="username" id="username" autofocus/>
+                <span id="userName_true" class="true"></span>
+                <span id="userName_false" class="false"></span>
                 <!--<img src="img/icon/false.png" alt="" id="result"/>-->
             </li>
             <li>
                 <label>密码</label>
-                <input type="password" id="password"/>
-                
+                <!--<input type="password" id="password" onBlur="checkPassword()"/>-->
+                <input type="password" name="password" id="password"/>
+                <span id="pass_true" class="true"></span>
+                <span id="pass_false" class="false"></span>
             </li>
             <li>
                 <label>验证码</label>
-                <input type="text" id="verify"/>
-               <!-- <img src="getVerify.php" alt=""/>-->
+                <input type="text" name="verify" id="verify" onBlur="checkVerify()"/>
+                <!-- <img src="getVerify.php" alt=""/>-->
+                <span id="verify_true" class="true"></span>
+                <span id="verify_false" class="false"></span>
            </li>
            <li>
                 <p>
-                    <input type="checkbox" id="check1"/><label for="check1">自动登录</label>
+                    <input type="checkbox" name="autoflag" id="check1"/><label for="check1">自动登录</label>
                     <input type="checkbox" id="check2"/><label for="check2">安全控件登录</label>
                     <a href="#">忘记密码？</a>
                 </p>
             </li>
-        	<input type="submit" id="login_btn" class="login_btn" value="登 录"/>
+        	<input type="submit" id="login_btn" class="login_btn" value="登 录" onClick="login()"/>
         </form>
         <div class="login_box_bottom clearfix">
             <div class="login_partners left clearfix">
@@ -85,79 +91,110 @@
 </div>
 
 <script>
-function checkUsername(){
-//document.getElementById("username").onblur = function(){
-	var request;
-	if(window.XMLHttpRequest){
-		request = new XMLHttpRequest();
-	}else if(window.ActiveXObject){
-		var versions = [
-			"MSXML2.XmlHttp.6.0",
-			"MSXML2.XmlHttp.3.0"
-		];
-		for(var i=0;i<versions.length;i++){
-			try{
-				request = new ActiveXObject(versions[i]);
-			}catch(errror){}
+	//创建一个ajax请求
+	function createXMLHttpRequest(){
+		var request;
+		if(window.XMLHttpRequest){
+			request = new XMLHttpRequest();
+			return request;
+		}else if(window.ActiveXObject){
+			var versions = [
+				"MSXML2.XmlHttp.6.0",
+				"MSXML2.XmlHttp.3.0"
+			];
+			for(var i=0;i<versions.length;i++){
+				try{
+					request = new ActiveXObject(versions[i]);
+					return request;
+				}catch(errror){}
+			}
 		}
+		return null;
 	}
-	request.open("get","server.php?username="+ document.getElementById("username").value);
-	request.send();
-	request.onreadystatechange = function(){
-		if(request.readyState==4){
-			if(request.status==200){
-				if(request.responseText=="true"){
-					/*document.getElementById("result").src = "";
-					document.getElementById("result").src = "img/icon/true.png";
-					document.getElementById("result").style.visibility = "visible";*/
-				    //alert(request.responseText);
-					document.getElementById("result").style.background = "url(img/icon/true.png) center no-repeat";
-					document.getElementById("result").style.visibility = "visible";
-				}else{
-					/*document.getElementById("result").src = "";
-					document.getElementById("result").src = "img/icon/false.png";
-					document.getElementById("result").style.visibility = "visible";*/
-					document.getElementById("result").style.background = "url(img/icon/false.png) center no-repeat";
-					document.getElementById("result").style.visibility = "visible";
+	//ajax检测验证码输入正误
+	function checkVerify(){
+		var request = createXMLHttpRequest();
+		//初始化ajax请求
+		request.open("get","server.php?verify="+ document.getElementById("verify").value);
+		request.send();
+		request.onreadystatechange = function(){
+			if(request.readyState==4){
+				if(request.status==200){
+					if(request.responseText=="true"){
+						document.getElementById("verify_false").style.display ="none";
+						document.getElementById("verify_true").style.display = "inline-block";
+					}else{
+						document.getElementById("verify_false").style.display ="inline-block";
+						document.getElementById("verify_true").style.display = "none";
+					}
 				}
 			}
 		}
 	}
 	
-}
-
-
-document.getElementById("login_btn").onclick = function(){
-	var request;
 	
-	if(window.XMLHttpRequest){
-		request = new XMLHttpRequest();
-	}else if(window.ActiveXObject){
-		var versions = [
-			"MSXML2.XmlHttp.6.0",
-			"MSXML2.XmlHttp.3.0"
-		];
-		for(var i=0;i<versions.length;i++){
-			try{
-				request = new ActiveXObject(versions[i]);
-			}catch(errror){}
-		}
-	}
-	request.open("post","server.php");
-	var data = "username="+ document.getElementById("username").value + "&password=" + document.getElementById("password").value + "&verify=" + document.getElementById("verify").value;
-	request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	request.send(data);
-	request.onreadystatechange = function(){
-		if(request.readyState==4){
-			if(request.status==200){
-				alert(request.responseText);
-				
-			}else{
-				alert("出错了~");
+	//ajax检测用户名和密码 但是感觉方法有问题 暂时先不增加检测
+	/*function checkUsername(){
+	//document.getElementById("username").onblur = function(){
+		var request = createXMLHttpRequest();
+		//初始化ajax请求
+		request.open("get","server.php?username="+ document.getElementById("username").value);
+		request.send();
+		request.onreadystatechange = function(){
+			if(request.readyState==4){
+				if(request.status==200){
+					if(request.responseText=="true"){
+						document.getElementById("userName_false").style.display ="none";
+						document.getElementById("userName_true").style.display = "inline-block";
+					}else{
+						document.getElementById("userName_false").style.display ="inline-block";
+						document.getElementById("userName_true").style.display = "none";
+					}
+				}
 			}
 		}
 	}
-}
+	
+	function checkPassword(){
+	//document.getElementById("username").onblur = function(){
+		var request = createXMLHttpRequest();
+		//初始化ajax请求
+		request.open("get","server.php?password="+ document.getElementById("password").value);
+		request.send();
+		request.onreadystatechange = function(){
+			if(request.readyState==4){
+				if(request.status==200){
+					if(request.responseText=="true"){
+						document.getElementById("pass_false").style.display ="none";
+						document.getElementById("pass_true").style.display = "inline-block";
+					}else{
+						document.getElementById("pass_false").style.display ="inline-block";
+						document.getElementById("pass_true").style.display = "none";
+					}
+				}
+			}
+		}
+	}*/
+	
+	//登录方法 应用表单提交方法，不适用ajax
+	/*function login(){
+	//document.getElementById("login_btn").onclick = function(){
+		var request = createXMLHttpRequest();
+		request.open("post","server.php");
+		var data = "username="+ document.getElementById("username").value + "&password=" + document.getElementById("password").value + "&verify=" + document.getElementById("verify").value;
+		request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		request.send(data);
+		request.onreadystatechange = function(){
+			if(request.readyState==4){
+				if(request.status==200){
+					alert(request.responseText);		
+					window.location.href = "index.html";
+				}else{
+					alert("出错了~");
+				}
+			}
+		}
+	}*/
 </script>
 </body>
 </html>

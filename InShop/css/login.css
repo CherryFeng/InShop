@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 /*登录框*/
+.relative{
+	position:relative;
+}
 .login_box{
 	margin:10px auto 0;
 	width:306px;
@@ -12,7 +15,7 @@
 	color:#666;
 }
 #user_pass input[type='text'],input[type='password']{
-	width:240px;
+	width:265px;
 	height:32px;
 	line-height:32px;
 	border:1px solid #999;;
@@ -34,14 +37,20 @@
 	text-decoration:none;
 	color:#000;
 }
-#result{
-	display:inline-block;
+.true,.false{
 	width:16px;
 	height:16px;
-	visibility:hidden;
-	position:relative;
-	top:4px;
+	display:none;
+	position:absolute;
+	top:30px;
+	right:-16px;
 	
+}
+.true{
+	background:url(../img/icon/true.png) center no-repeat;
+}
+.false{
+	background:url(../img/icon/false.png) center no-repeat;
 }
 .login_cont >p a:hover{
 	text-decoration:underline;
